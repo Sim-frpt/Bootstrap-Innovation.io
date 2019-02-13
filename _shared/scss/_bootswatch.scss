@@ -1,94 +1,72 @@
-// Litera 4.2.1
+// Superhero 4.2.1
 // Bootswatch
 
 
 // Variables ===================================================================
 
-$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !default;
+@import url($web-font-path);
 
 // Navbar ======================================================================
 
 .navbar {
-  font-size: 0.875em;
-}
-
-.bg-dark {
-  background-color: $success !important;
-}
-
-.bg-light {
-  background-color: #fff !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  &.navbar-fixed-top {
-    border-width: 0 0 1px 0;
-  }
-
-  &.navbar-fixed-bottom {
-    border-width: 1px 0 0 0;
-  }
+  font-size: $font-size-sm;
 }
 
 // Buttons =====================================================================
 
 .btn {
-  border-radius: 1.078em;
-  font-family: $font-family-sans-serif;
-  font-size: 0.875em;
-
-  &-lg {
-    border-radius: 2.688em;
-  }
-
-  &-sm {
-    border-radius: 0.844em;
-    font-size: 0.688em;
-  }
-
-  &-secondary,
-  &-secondary:hover,
-  &-warning,
-  &-warning:hover {
-    color: $white;
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
+    }
   }
 }
 
 // Typography ==================================================================
 
-p {
-  font-family: $font-family-serif;
+.dropdown-menu {
+
+  font-size: $font-size-sm;
 }
 
-blockquote {
-  font-style: italic;
+.dropdown-header {
+  font-size: $font-size-sm;
 }
 
-footer {
-  font-size: 0.875em;
-}
-
-.lead {
-  color: $gray-600;
-  font-family: $font-family-sans-serif;
+.blockquote-footer {
+  color: $body-color;
 }
 
 // Tables ======================================================================
 
-table,
 .table {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 
-  &-primary,
-  &-secondary,
-  &-success,
-  &-info,
-  &-warning,
-  &-danger {
+  .thead-dark th {
+    color: $white;
+  }
+
+  a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
+  .text-muted {
+    color: $text-muted;
+  }
+
+  &-dark {
     color: #fff;
   }
-}
-
-.table {
 
   &-primary {
     &, > th, > td {
@@ -205,16 +183,31 @@ table,
 
 // Forms =======================================================================
 
-// Navs ========================================================================
-
-.nav,
-.breadcrumb,
-.pagination {
-  font-size: 0.875em;
+label,
+.radio label,
+.checkbox label,
+.help-block {
+  font-size: $font-size-sm;
 }
 
-.dropdown-menu {
-  font-size: 0.875em;
+// Navs ========================================================================
+
+.nav-tabs,
+.nav-pills {
+  .nav-link,
+  .nav-link:hover {
+    color: $body-color;
+  }
+
+  .nav-link.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+.page-link:hover,
+.page-link:focus {
+  color: #fff;
+  text-decoration: none;
 }
 
 // Indicators ==================================================================
@@ -222,54 +215,58 @@ table,
 .alert {
   border: none;
   color: $white;
-  font-size: 0.875em;
 
-  &, p {
-    font-family: $font-family-sans-serif;
-  }
-
-  a, .alert-link {
+  a,
+  .alert-link {
     color: #fff;
-    font-weight: normal;
     text-decoration: underline;
   }
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
       @if $enable-gradients {
-        background: $value linear-gradient(0deg, mix($body-bg, $value, 15%), $value) repeat-x;
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
       } @else {
         background-color: $value;
       }
     }
   }
-
-  &-light {
-    &,
-    & a,
-    & .alert-link {
-      color: $body-color;
-    }
-  }
 }
 
 .badge {
-  vertical-align: bottom;
-
-  &-secondary,
-  &-warning {
+  &-warning,
+  &-info {
     color: $white;
   }
 }
 
-.tooltip {
-  font-size: 11px;
+.close {
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 // Progress bars ===============================================================
 
 // Containers ==================================================================
 
-.list-group {
-  font-size: 0.875em;
+.modal {
+  &-header,
+  &-footer {
+    background-color: $table-hover-bg;
+
+    .close {
+      color: #fff;
+      text-shadow: none;
+      opacity: 0.5;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
 }
