@@ -4,6 +4,94 @@
 */
 @import "./_shared/scss/theme.scss";
 
-/*
-  If you need some CSS for any reason you can put it here.
-*/
+
+.carousel-inner img {
+  height: 600px;
+}
+
+
+blockquote{
+    border-left:none;
+    padding: 5px;
+}
+
+.quote-box{
+  display: inline;
+  overflow: hidden;
+  margin-top: -50px;
+  padding-top: -100px;
+  border-radius: 17px;
+  margin-top: 25px;
+  color:white;
+  width: 325px;
+}
+
+.quotation-mark{
+  margin-top: -10px;
+  font-weight: bold;
+  font-size:100px;
+  color:white;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+.quote-text{
+  font-size: 19px;
+  margin-top: -65px;
+}
+
+#jamal{
+  display: block;
+  max-width: 60%;
+  height: auto;
+  border-radius: 17px;
+  border: 2px solid #2B3E50;
+  padding: none;
+}
+
+#logoHeader{
+  margin-bottom: 2em;
+}
+#partnership{
+  color: $orange;
+  border: 2px solid #2B3E50;
+  margin: 0.5em;
+  border-radius: 17px;
+
+}
+.list-group {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+  flex-basis: 25%;
+  height: 25%;
+
+    img{
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  }
+}
+
+// -------teamnjk CSS
+
+#teamImageDiv {
+  position: relative;
+  #teamBanner{
+    opacity: 0.5;
+  }
+  h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $orange;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.ourTeam{
+  border-radius: 50%;
+}
