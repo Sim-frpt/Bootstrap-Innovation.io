@@ -4,12 +4,12 @@
 
 {% block content %}
 <div id="teamImageDiv" class="container">
-  <div class="row">
     <img id="teamBanner" src="/_shared/img/Team/TeamImage.jpeg" alt="banner of team for team presentation">
-    <h2>Come meet our worker bees</h2>
-  </div>
-  <div class="container teamDiv">
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <h2 >Come meet our worker bees</h2>
+</div>
+<div class="container teamDiv">
+  <div class="row justify-content-center">
+    <div class="card border-primary m-3 col-12">
       <div class="card-header">Innovation team</div>
       <div class="card-body">
         <h4 class="card-title">Founder</h4>
@@ -21,8 +21,10 @@
            <img class="img-fluid ourTeam" src="/_shared/img/Team/Vadim.jpeg" alt="Founder image">
       </div>
     </div>
+  </div>
 
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+  <div class="row justify-content-around">
+    <div class="card border-primary mb-3 col-12 col-md-6">
       <div class="card-header">Innovation team</div>
       <div class="card-body">
         <h4 class="card-title">UX Designer</h4>
@@ -35,7 +37,7 @@
       </div>
     </div>
 
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+    <div class="card border-primary mb-3 col-12 col-md-6">
       <div class="card-header">Innovation team</div>
       <div class="card-body">
         <h4 class="card-title">Data Science and Analysis</h4>
@@ -48,8 +50,9 @@
            <img class="img-fluid ourTeam" src="/_shared/img/Team/Julien.jpeg" alt="UX designer image">
       </div>
     </div>
-
-    <div class="card border-primary mb-3" style="max-width: 20rem;">
+  </div>
+  <div class="row justify-content-around">
+    <div class="card border-primary mb-3 col-12 col-md-6">
       <div class="card-header">Innovation team</div>
       <div class="card-body">
         <h4 class="card-title">Digital Marketing</h4>
@@ -59,8 +62,8 @@
            </p>
            <img class="img-fluid ourTeam" src="/_shared/img/Team/Mathieu.jpeg" alt="UX designer image">
       </div>
-
-      <div class="card border-primary mb-3" style="max-width: 20rem;">
+    </div>
+    <div class="card border-primary mb-3 col-12 col-md-6">
         <div class="card-header">Innovation team</div>
         <div class="card-body">
           <h4 class="card-title">Web Designer</h4>
@@ -70,7 +73,8 @@
              </p>
              <img class="img-fluid ourTeam" src="/_shared/img/Team/Joé.jpeg" alt="UX designer image">
         </div>
-      </div>
     </div>
+  </div>
 </div>
+
 {% endblock %}
