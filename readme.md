@@ -1,4 +1,6 @@
-Bootstrap Exercice - Innovation.io
+# Bootstrap Exercice - Innovation.io
+
+[Lien Github Pages](https://sim-frpt.github.io/Bootstrap-Innovation.io/)
 Here you will create individually a website using Bootstrap. The goal is to practise HTML and web design in a corporate environment, using Bootstrap as a tool to facilitate that goal.
 
 The pitch
