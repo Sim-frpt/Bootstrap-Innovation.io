@@ -25,9 +25,8 @@
 .carousel-inner img {
   height: 40em;
   opacity: 0.8;
-  object-fit: contain;
-
-
+  object-fit: cover;
+  padding: 1em;
 }
 
 
